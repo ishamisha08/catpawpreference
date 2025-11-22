@@ -96,7 +96,7 @@ const App = () => {
 
 
             {/* Buttons */}
-            <div className="flex gap-10 mt-20 items-center animate-fadeIn">
+            <div className="flex gap-10 mt-30 items-center animate-fadeIn">
               <img
                 src={assets.dislike}
                 className="w-20 cursor-pointer transition-transform drop-shadow-md hover:scale-110 active:scale-90"
