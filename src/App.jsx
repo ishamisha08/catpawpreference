@@ -72,7 +72,7 @@ const App = () => {
 
 
   {/* CAT CARD WITH SWIPE + LOADING + FADE-IN */}
-<div className="relative w-80 h-80 mt-30 flex items-center justify-center">
+<div className="relative w-80 h-80 mt-25 flex items-center justify-center">
 
   {/* Loading skeleton */}
   {loading && (
