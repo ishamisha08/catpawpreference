@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+NZ+Guides&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap');
+
+
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --color-primary: #654321 ;
+  --color-secondary: #EDE8D0 ;
+}
+
+/* Default font */
+* {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Playfair font */
+.font-playfair {
+  font-family: 'Playfair', serif !important;
+}
+
+/* Playwrite NZ Guides font */
+.font-playwriteNZ {
+  font-family: 'Playwrite NZ Guides', cursive !important;
+}
+
+/* Pixel font */
+.font-pixel {
+  font-family: 'Press Start 2P', cursive !important;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.font-baloo {
+  font-family: 'Baloo 2', cursive !important;
+}
