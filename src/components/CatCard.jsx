@@ -7,7 +7,7 @@ const CatCard = ({ img, onSwipe, onLoadComplete }) => {
   return (
     <motion.div
       className="w-full max-w-sm h-[420px] md:h-[480px] rounded-2xl overflow-hidden shadow-xl bg-white cursor-grab"
-      style={{ touchAction: "none" }}
+      style={{ touchAction: "pan-y" }}
       drag="x"
       dragConstraints={{ left: 0, right: 0 }}
       dragElastic={0.9}
