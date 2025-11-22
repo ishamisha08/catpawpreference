@@ -48,9 +48,15 @@ const App = () => {
     (kitties are waiting…)
   </p>
 
-  <p className="font-baloo text-primary text-lg mt-4">
-  {current + 1} / {catImages.length}
-  </p>
+ {/* Paw Progress */}
+<p className="font-baloo text-primary text-lg mt-4 flex items-center gap-2">
+  <span className="text-2xl">🐾</span>
+  <span>
+    {catImages.length - current - 1} more paws to go!
+  </span>
+  <span className="text-2xl">🐾</span>
+</p>
+
 
 </div>
 
