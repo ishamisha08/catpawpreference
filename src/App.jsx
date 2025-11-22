@@ -68,25 +68,29 @@ const App = () => {
             {/* ------------------------------
                 3. Cat card + loading skeleton
                ------------------------------ */}
-            <div className="relative w-full flex justify-center items-center">
+           {/* Cat image wrapper (fixed size, flex centered) */}
+<div className="w-80 h-80 flex items-center justify-center relative">
 
-              {/* Loading skeleton */}
-              {loading && (
-                <div className="w-80 h-80 bg-white/60 border border-primary/10 rounded-xl shadow-lg flex items-center justify-center animate-pulse text-3xl">
-                  🐾 Loading kitty...
-                </div>
-              )}
+  {/* Loading skeleton */}
+  {loading && (
+    <div className="absolute inset-0 flex items-center justify-center">
+      <div className="w-full h-full bg-white/60 border border-primary/10 rounded-xl shadow-lg flex items-center justify-center animate-pulse text-3xl">
+        🐾 Loading kitty...
+      </div>
+    </div>
+  )}
 
-              {/* Cat image */}
-              <img
-                src={catImages[current]}
-                onLoad={() => setLoading(false)}
-                alt="cat"
-                className={`w-80 h-80 object-cover rounded-xl shadow-lg transition-opacity duration-300 ${
-                  loading ? "opacity-0" : "opacity-100"
-                }`}
-              />
-            </div>
+  {/* Actual cat image */}
+  <img
+    src={catImages[current]}
+    onLoad={() => setLoading(false)}
+    alt="cat"
+    className={`absolute inset-0 w-full h-full object-cover rounded-xl shadow-lg transition-opacity duration-300 ${
+      loading ? "opacity-0" : "opacity-100"
+    }`}
+  />
+</div>
+
 
             {/* Buttons */}
             <div className="flex gap-10 mt-10 items-center animate-fadeIn">
