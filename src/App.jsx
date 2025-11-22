@@ -69,7 +69,10 @@ const App = () => {
                 3. Cat card + loading skeleton
                ------------------------------ */}
            {/* Cat image wrapper (fixed size, flex centered) */}
-<div className="w-80 h-80 flex items-center justify-center relative">
+
+
+  {/* CAT CARD WITH SWIPE + LOADING + FADE-IN */}
+<div className="relative w-80 h-80 flex items-center justify-center">
 
   {/* Loading skeleton */}
   {loading && (
@@ -80,16 +83,16 @@ const App = () => {
     </div>
   )}
 
-  {/* Actual cat image */}
-  <img
-    src={catImages[current]}
-    onLoad={() => setLoading(false)}
-    alt="cat"
-    className={`absolute inset-0 w-full h-full object-cover rounded-xl shadow-lg transition-opacity duration-300 ${
-      loading ? "opacity-0" : "opacity-100"
-    }`}
-  />
+  {/* Swipeable CatCard */}
+  <div className={`${loading ? "opacity-0" : "opacity-100"} transition-opacity duration-300`}>
+    <CatCard
+      img={catImages[current]}
+      onSwipe={handleSwipe}
+      onLoadComplete={() => setLoading(false)}
+    />
+  </div>
 </div>
+
 
 
             {/* Buttons */}
