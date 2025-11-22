@@ -66,13 +66,15 @@ const App = () => {
     <div className="flex gap-10 mt-10 items-center animate-fadeIn">
       <img
         src={assets.dislike}
-        className="w-20 cursor-pointer hover:scale-110 transition-transform drop-shadow-md"
+        className="w-20 cursor-pointer transition-transform drop-shadow-md
+               hover:scale-110 active:scale-90"
         onClick={() => handleSwipe("left")}
       />
 
       <img
         src={assets.love}
-        className="w-20 cursor-pointer hover:scale-110 transition-transform drop-shadow-md"
+        className="w-20 cursor-pointer transition-transform drop-shadow-md
+               hover:scale-110 active:scale-90"
         onClick={() => handleSwipe("right")}
       />
     </div>
