@@ -47,6 +47,11 @@ const App = () => {
   <p className="font-baloo text-gray-600 text-sm mt-3 opacity-80">
     (kitties are waiting…)
   </p>
+
+  <p className="font-baloo text-primary text-lg mt-4">
+  {current + 1} / {catImages.length}
+  </p>
+
 </div>
 
     <CatCard img={catImages[current]} onSwipe={handleSwipe} />
